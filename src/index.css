@@ -1,5 +1,5 @@
 body {
-  background-color: #F6FCFF;
+  background-color: #f6fcff;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -22,7 +22,7 @@ button {
   background-color: transparent;
   border: none;
   color: #000;
-  transition: .4s;
+  transition: 0.4s;
   font-size: 1em;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
