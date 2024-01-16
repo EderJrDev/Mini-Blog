@@ -1,9 +1,10 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 //CSS
 import styles from "./Navbar.module.css";
+import { useAuthValue } from "../context/AuthContext";
 
 const Navbar = () => {
+  const { user } = useAuthValue();
   return (
     <nav className={styles.navbar}>
       <NavLink to="/" className={styles.brand}>
@@ -18,22 +19,26 @@ const Navbar = () => {
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="/login"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Entrar
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/register"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Cadastrar
-          </NavLink>
-        </li>
+        {!user && (
+          <>
+            <li>
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
+                Entrar
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/register"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
+                Cadastrar
+              </NavLink>
+            </li>
+          </>
+        )}
         <li>
           <NavLink
             to="/about"
