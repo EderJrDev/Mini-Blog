@@ -27,21 +27,21 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
       try {
         let q;
 
-        // if (search) {
-        //   q = await query(
-        //     collectionRef,
-        //     where("tags", "array-contains", search),
-        //     orderBy("createdAt", "desc")
-        //   );
-        // } else if (uid) {
-        //   q = await query(
-        //     collectionRef,
-        //     where("uid", "==", uid),
-        //     orderBy("createdAt", "desc")
-        //   );
-        // } else {
-        //   q = await query(collectionRef, orderBy("createdAt", "desc"));
-        // }
+        if (search) {
+          q = await query(
+            collectionRef,
+            where("tagsArray", "array-contains", search),
+            orderBy("createdAt", "desc")
+          );
+        } else if (uid) {
+          q = await query(
+            collectionRef,
+            where("uid", "==", uid),
+            orderBy("createdAt", "desc")
+          );
+        } else {
+          q = await query(collectionRef, orderBy("createdAt", "desc"));
+        }
 
         q = await query(collectionRef, orderBy("createdAt", "desc"));
 
@@ -66,7 +66,7 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
     }
 
     loadData();
-  }, [docCollection, search, uid, cancelled]);
+  }, [docCollection, documents, search, uid, cancelled]);
 
   useEffect(() => {
     return () => setCancelled(true);
