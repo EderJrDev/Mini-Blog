@@ -1,32 +1,31 @@
-.navbar {
+.post_detail {
+  margin-bottom: 2em;
+}
+
+.post_detail img {
+  max-width: 600px;
+}
+
+.post_detail h2 {
+  margin-bottom: 0.4em;
+}
+
+.post_detail .tags {
+  margin-bottom: 1.2em;
   display: flex;
-  box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
-  justify-content: space-between;
-  align-items: center;
-  padding: .5em 2em;
 }
 
-.brand {
-  font-size: 1.2em;
+.tags p {
+  margin-right: 0.5em;
 }
 
-.brand span {
-  font-weight: 900;
-  text-transform: uppercase;
+.tags span {
+  font-weight: bold;
 }
 
-.links_list {
-  display: flex;
-  list-style: none;
-}
-
-.links_list li a {
-  margin-right: 1em;
-  padding: .4em .6em;
-  border-radius: 0.3em;
-}
-
-.active {
-  background-color: #000;
-  color: #fff;
+.createdby {
+  font-style: italic;
+  color: #444;
+  font-size: 0.8em;
+  margin-bottom: 1em;
 }

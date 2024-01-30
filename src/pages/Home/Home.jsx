@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 //CSS
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
