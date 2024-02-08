@@ -1,4 +1,4 @@
-# Nlw React do Zero a Maestria (c/ hooks, router, API, Projetos) - Project - MiniBlog
+# React do Zero a Maestria (c/ hooks, router, API, Projetos) - Project - MiniBlog
 
 
 <img
